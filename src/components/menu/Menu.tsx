@@ -2,11 +2,8 @@ import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,10 +11,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import cover from "../../../src/assets/heroBackground.png";
 
 
@@ -27,7 +21,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open', })<{
   open?: boolean;
 }>(({ theme, open,}) => ({
   flexGrow: 1,
-  transition: theme.transitions.create('margin', {
+  transition: theme.transitions.create('margin',  {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
@@ -112,7 +106,7 @@ const SideMenu = () => {
         open={open}
       >
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton sx={{color:'#FFC15D'}} onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
@@ -134,7 +128,7 @@ const SideMenu = () => {
       </Drawer>
       <Main open={open}> 
         <h1 style={{display:'flex', justifyContent:'center', fontSize:'220px', color:'#0492C2', fontFamily:'Playball', paddingBottom: '0'}}>Michelin</h1>
-        <p style={{fontSize: '35px', marginTop:'-150px', display:'flex', justifyContent:'center', color:'#D08100', fontFamily:'Playball'}}>
+        <p style={{fontSize: '35px', marginTop:'-150px', display:'flex', justifyContent:'center', color:'#FFC15D', fontFamily:'Playball'}}>
         Be part of my great world of recipes
         </p>
         <Box ></Box>
