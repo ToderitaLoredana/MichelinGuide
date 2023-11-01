@@ -18,6 +18,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import cover from "../../../src/assets/heroBackground.png";
+
 
 const drawerWidth = 240;
 
@@ -65,7 +67,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   backgroundColor: '#31525B',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
 }));
@@ -81,28 +82,21 @@ const SideMenu = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-
   return (
     <Box sx={{ display: 'flex', backgroundColor: '#31525B',
-      height: '100vh', backgroundRepeat:'no-repeat', backgroundSize: 'cover',backgroundImage: 'url(https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)'
+      height: '100vh', backgroundRepeat:'no-repeat', backgroundSize: 'cover', backgroundImage:`url(${cover})`
     }}>
-      {/* <CssBaseline /> */}
-      {/* <AppBar position="fixed" open={open}> */}
         <div>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ ml: 4, position: 'fixed', ...(open && { display: 'none' }) }}
+            sx={{ ml: 5,mt:5, position: 'fixed', color:'white', ...(open && { display: 'none' }), fontSize:'5' }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{fontSize:'50px'}} />
           </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography> */}
         </div>
-      {/* </AppBar> */}
       <Drawer
         sx={{
           width: drawerWidth,
@@ -122,34 +116,27 @@ const SideMenu = () => {
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        <h1 style={{paddingLeft: '45px', fontSize: '50px', color: '#D08100'}}>MENU</h1>
+        <h1 style={{paddingLeft: '45px', fontSize: '50px', color: '#D08100', fontFamily:'Lora'}}>MENU</h1>
         <Divider />
-        <List style={{fontSize: '30px', color: '#FFC15D'}}>
+        <List sx={{fontSize: '30px', color: '#FFC15D'}}>
           {['Main dishes', 'Drinks', 'Deserts'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                {/* <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon> */}
-                <ListItemText primary={text} />
+                <ListItemText primary={text} 
+                primaryTypographyProps={{
+                  fontFamily:'Lora',
+                  fontSize:'20px'
+                }}  />
               </ListItemButton>
             </ListItem>
           ))}
         </List>
       </Drawer>
-      <Main open={open}>
-        <p style={{fontSize: '40px'}}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales consequat quam id ornare. In iaculis non sapien blandit lobortis. Praesent dictum nisl sit amet lobortis varius. Suspendisse at urna ipsum. Phasellus aliquet dui purus, vitae imperdiet urna consequat tincidunt. Aliquam viverra magna eget pellentesque volutpat. Sed auctor finibus felis, iaculis fermentum magna finibus ac. Sed rutrum, enim eget iaculis rhoncus, neque risus auctor justo, eu aliquam ipsum mauris et est. Ut egestas gravida ipsum, vitae faucibus augue tristique vitae. Aenean dignissim, neque in laoreet venenatis, nisi urna congue ante, vitae tincidunt metus quam in augue. Morbi justo velit, imperdiet interdum orci et, viverra pretium lectus. Nullam et hendrerit leo. Ut finibus lorem in augue aliquam bibendum. Fusce fermentum diam neque, ac tincidunt nisi feugiat ac.
-
-Nullam eget lacinia magna, eget hendrerit dolor. Curabitur porttitor tincidunt risus, laoreet accumsan nisi facilisis id. Integer convallis maximus laoreet. Donec elementum dolor vitae leo vehicula, ut faucibus urna laoreet. Integer sed turpis hendrerit, placerat odio eget, dapibus ipsum. Pellentesque quis dui sit amet diam egestas ullamcorper porttitor sed tortor. Proin mauris dui, venenatis non velit vitae, sagittis imperdiet elit. Vestibulum in aliquet nisi. Sed vitae erat nec ante varius condimentum eu nec diam. Etiam pellentesque quam non molestie tempus. Mauris nunc urna, fermentum nec condimentum sed, sodales non leo. Pellentesque sed mi velit. Nunc mattis convallis scelerisque. Pellentesque ut dapibus ipsum, nec dictum augue.
-
-Suspendisse potenti. Aenean sodales magna lorem, eget ultrices nisi gravida id. Ut eget semper nulla. Sed lacinia porta ante, at ultricies velit accumsan ornare. In in mattis metus, at rhoncus felis. Nam facilisis vel felis quis interdum. Aliquam erat volutpat. Vestibulum et posuere sem, eu convallis arcu.
-
-Nunc vel elit felis. Donec congue varius ante, ac commodo lectus tincidunt a. Phasellus ligula lorem, placerat sed sagittis porta, maximus et dolor. Vestibulum ut suscipit tortor. Cras tincidunt placerat finibus. Etiam cursus pharetra nibh et cursus. Mauris sit amet tellus nisl. Pellentesque vel malesuada est, et dignissim risus. Morbi efficitur id nibh eu suscipit.
-
-Etiam eget viverra massa, quis pulvinar nisl. Maecenas condimentum risus velit, in finibus lorem volutpat id. Sed ut tortor vitae ipsum fringilla efficitur et ac est. Nunc libero lorem, condimentum vitae ante eget, mollis dignissim dui. Phasellus ultrices, justo et varius tincidunt, felis nibh tempor dolor, in venenatis ligula risus faucibus erat. Etiam neque lacus, molestie quis enim vel, suscipit condimentum nibh. Fusce elit nisl, hendrerit ac tincidunt porttitor, faucibus sed est. Nullam volutpat, justo ut rhoncus interdum, nibh nibh malesuada nibh, non maximus justo purus eget diam. Fusce libero mi, condimentum bibendum eros id, molestie euismod ligula. Sed vitae efficitur mauris. Nunc non vulputate velit.
+      <Main open={open}> 
+        <h1 style={{display:'flex', justifyContent:'center', fontSize:'220px', color:'#0492C2', fontFamily:'Playball', paddingBottom: '0'}}>Michelin</h1>
+        <p style={{fontSize: '35px', marginTop:'-150px', display:'flex', justifyContent:'center', color:'#D08100', fontFamily:'Playball'}}>
+        Be part of my great world of recipes
         </p>
-        {/* <DrawerHeader /> */}
         <Box ></Box>
       </Main>
     </Box>
