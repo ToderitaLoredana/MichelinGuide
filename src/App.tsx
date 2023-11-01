@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/material";
+import Menu from "./components/menu/Menu";
 import {SignIn} from './components/login-form/LoginPage.tsx/SignIn';
 
-function App() {
+const App = () => {
   return (
-   <SignIn/>
-   
+      <Menu />
   );
-}
+};
 
 export default App ;
