@@ -13,6 +13,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import cover from "../../../src/assets/heroBackground.png";
+import { recipes } from '../food-card/data';
+import FoodCard from '../food-card/FoodCard';
 
 
 const drawerWidth = 240;
@@ -131,7 +133,14 @@ const SideMenu = () => {
         <p style={{fontSize: '35px', marginTop:'-150px', display:'flex', justifyContent:'center', color:'#FFC15D', fontFamily:'Playball'}}>
         Be part of my great world of recipes
         </p>
-        <Box ></Box>
+        
+        <List>
+              {recipes.map(recipe => (
+                   <FoodCard key={recipe.title} recipe={recipe} />
+                )
+              )
+              }
+        </List>
       </Main>
     </Box>
   );

@@ -4,8 +4,8 @@ import FoodCard from "./components/food-card/FoodCard";
 
 const App = () => {
   return (
-      // <Menu />
-      <FoodCard />
+      <Menu />
+      // <FoodCard />
   );
 };
 
