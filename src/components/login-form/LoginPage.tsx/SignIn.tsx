@@ -7,11 +7,26 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { users } from "../../../data/users";
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 export const SignIn = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  let isLoggedIn = false;
+
+  const isLoggedInJson = localStorage.getItem("isLoggedIn");
+
+  if (isLoggedInJson) {
+    isLoggedIn = JSON.parse(isLoggedInJson);
+  }
+  
+  if (isLoggedIn) {
+    return <Navigate to="/" />
+  }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -19,8 +34,10 @@ export const SignIn = () => {
     const foundUser = users.find(
       (user) => user.email === email && user.password === password
     );
+
     if (foundUser) {
-      console.log("user found");
+      localStorage.setItem('isLoggedIn', JSON.stringify(true));
+      navigate("/");
     } else {
       console.log("user not found");
     }
