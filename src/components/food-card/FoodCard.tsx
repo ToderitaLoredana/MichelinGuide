@@ -16,7 +16,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Carbonara from "../../../src/assets/CarbonaraPasta.jpg";
 import FoodBlogger from "../../../src/assets/foodBlogger.jpg";
-import { Recipe, recipes } from './data';
+import { Recipe} from './data';
 
 interface FoodCardProps {
   recipe: Recipe;
@@ -45,7 +45,7 @@ export default function RecipeReviewCard({recipe}: FoodCardProps) {
     setExpanded(!expanded);
   };
     return(
-    <Card sx={{ maxWidth: 345, backgroundColor:'#31525B' }}>
+    <Card elevation={18} sx={{height:'100%', backgroundColor:'#31525B' }}>
     <CardHeader sx={{color:'#D08100', fontFamily:'Lora'}}
             avatar={
               <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -57,14 +57,14 @@ export default function RecipeReviewCard({recipe}: FoodCardProps) {
                 <MoreVertIcon sx={{ color: '#D08100'}} />
               </IconButton>
             }
-            title={recipe.title} 
+            title={title} 
             subheader={recipe.category}
           />
           <CardMedia
             component="img"
-            height="240"
+            height="350"
             image={recipe.image}
-            alt="Pasta Carbonara"
+            alt={title}
           />
           <CardContent>
             <Typography sx={{fontFamily:'Lora', color:'#FFC15D', fontSize:'16px', display:'flex', justifyContent:'center', textAlign:'center'}} variant="body2" color="text.secondary">
