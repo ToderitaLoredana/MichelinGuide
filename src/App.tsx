@@ -1,9 +1,7 @@
-import { Container } from "@mui/material";
-import Menu from "./components/menu/Menu";
-
+import HomePage from "./components/home-page/HomePage";
 const App = () => {
   return (
-      <Menu />
+      <HomePage />
   );
 };
 
