@@ -3,16 +3,19 @@ import LasagnaImage from "../../../src/assets/LasagnaBolognese.png";
 import ButterChickenImage from "../../../src/assets/ButterChicken.jpg";
 import PumpkinSoupImage from "../../../src/assets/PumpkinSoup.jpg";
 import MargheritaImage from "../../../src/assets/PizzaMargherita.jpg";
+import SteakImage from "../../../src/assets/PorkSteak.jpg";
 import CremeBruleeImage from "../../../src/assets/CremeBrulee.webp";
 import TiramisuImage from "../../../src/assets/Tiramisu.jpg";
 import MacaronsImage from "../../../src/assets/Macarons.jpg";
 import PoachedPearsImage from "../../../src/assets/PoachedPears.jpg";
 import BlueberryMuffinsImage from "../../../src/assets/BluebeeryMuffin.webp";
+import ProfiterolesImage from "../../../src/assets/Profiteroles.webp";
 import CosmopolitanImage from "../../../src/assets/CosmopolitanCocktail.webp";
 import MojitoImage from "../../../src/assets/Mojito.jpg";
 import PinaColadaImage from "../../../src/assets/PinaColada.avif";
 import BlueLagoonImage from "../../../src/assets/BlueLagoon.webp";
 import AperolImage from "../../../src/assets/AperolSpritz.jpg";
+import BloodyMaryImage from "../../../src/assets/BloodyMary.webp";
 import { preProcessFile } from "typescript";
 
 export interface Recipe {
@@ -191,6 +194,26 @@ export const recipesData: Recipe[] = [
       "Remove from oven and let cool for 3-4 minutes before slicing.",
     ],
   },
+  {
+    title: "Pork steak with smoky corn",
+    category: "MAIN_DISHES",
+    image: SteakImage,
+    description:
+      "The tasty steak, baked on the grill and crispy corn. All together give you unforgettable moments that will teleport you directly in Florence, Italy. Cook this to discover the beauty of the Italian dishes!",
+    ingredients: [
+      "4 tsp tomato ketchup",
+      "2 tbsp dark muscovado sugar",
+      "1 tbsp white wine vinegar",
+      "1 tsp paprika",
+      "4 pork loin steaks, trimmed of any fat",
+      "4 corn on the cobs",
+      "1 tbsp butter",
+    ],
+    preparationSteps: [
+      "Boil a large pan of water for the corn. Make a sauce by mixing the ketchup, sugar and vinegar with half the paprika. Heat a non-stick frying pan, then brown the pork for 3-4 mins on each side. Spoon over the sauce halfway through cooking and turn the steaks in it until the pork is cooked through and sticky.",
+      "Meanwhile, tip the corn into the boiling water and cook for 5-8 mins until tender. Stir the remaining paprika into the butter in a heatproof bowl and microwave on High for 15-20 secs until the paprika is sizzling in the melted butter (alternatively, just melt the smoky butter in a small pan). Drain the corn, brush over the butter, then serve with the sticky pork steaks and a green salad.",
+    ],
+  },
 
   {
     title: "CremeBrulee",
@@ -320,6 +343,30 @@ export const recipesData: Recipe[] = [
       "Cool in the tin for 10 mins, then carefully lift out onto a wire rack to finish cooling. Will keep for 3-4 days in an airtight container – after a day or two, pop them in the microwave for 10-15 secs on high to freshen up.",
     ],
   },
+  {
+    title: "Profiteroles",
+    category: "DESERTS",
+    image: ProfiterolesImage,
+    description:
+      "Childhood desert, filled-up with soft cream, that gives you the highest pleasure. Enjoy this dessert with a cup of coffee!",
+    ingredients: [
+      "50g butter (preferably unsalted), cut into cubes",
+      "2 tbsp caster sugar",
+      "75g strong white flour, sifted with a pinch of fine sea salt",
+      "2 eggs, lightly beaten",
+      "300ml double cream",
+      "few drops vanilla extract",
+      "50g cocoa powder",
+      "175g caster sugar",
+
+    ],
+    preparationSteps: [
+      "Heat the oven to 220C/200C fan/gas 7. To make the profiteroles, put the butter and 2 tsp of the caster sugar in a saucepan with 150ml water. Place the pan over a low heat until the butter and sugar have melted, then bring to the boil. Take off the heat, add the flour all at once and beat energetically with a wooden spoon until the dough comes away from the sides of the pan.",
+      "Leave to cool for 5 mins, then beat in the eggs bit by bit until you have a stiff, glossy mixture (this process is much easier in a food processor). Rinse two baking trays with cold water, shaking off any excess so they are slightly damp (this helps the pastry to rise). Using 2 teaspoons, spoon blobs of the mixture onto the baking trays. Then place in the oven and cook for about 18-20 mins until well risen and brown. Remove the profiteroles from the oven and cut a small slit in the base of each one so they don’t collapse. Cool on a wire rack.",
+      "When they’re cold, whip the cream lightly until just holding its shape. Sweeten to taste with remaining sugar and a few drops of vanilla extract. Cut the profiteroles in half, fill them with the sweetened cream and pile them up on a plate. You can refrigerate them for 1-2 hrs at this point but not for any longer as the pastry will go soggy.",
+      "To make the sauce, sift the cocoa powder into a bowl. Put the sugar in a pan with 100ml water and warm over a low heat until dissolved. Bring to the boil, cook for 1 min, then pour over the cocoa powder and stir well until smooth. Return the sauce to the pan, cook for 1 min then set aside for 15 mins before drizzling over the profiteroles.",
+    ],
+  },
 
   {
     title: "CosmopolitanCocktail",
@@ -407,6 +454,19 @@ export const recipesData: Recipe[] = [
     ingredients: ["ice", "100ml Aperol", "150ml prosecco", "soda, to top up"],
     preparationSteps: [
       "Put a couple of cubes of ice into 2 glasses and add a 50 ml measure of Aperol to each. Divide the prosecco between the glasses and then top up with soda, if you like.",
+    ],
+  },
+  {
+    title: "BloodyMary",
+    category: "DRINKS",
+    image: BloodyMaryImage,
+    description:
+      "Get a taste of summer with our take on this classic Italian cocktail. You will enjoy this!",
+    ingredients: ["large handful of ice", "100ml vodka", "500ml tomato juice", "1 tbsp lemon juice, plus 2 slices to serve", "few shakes Worcestershire sauce","few shakes Tabasco (smoked Tabasco is nice)","pinch celery salt","pinch black pepper", "2 celery sticks, to serve"],
+    preparationSteps: [
+      "Place the ice in a large jug. Measure the vodka, tomato juice and lemon juice and pour it straight onto the ice.",
+      "Add 3 shakes of Worcestershire sauce and Tabasco (or more if you like it very spicy) and a pinch of celery salt and pepper. Stir until the outside of the jug feels cold, then strain the cocktail into 2 tall glasses.",
+      "Top up with fresh ice, add a celery stick and lemon slice to both glasses and enjoy.",
     ],
   },
 ];
