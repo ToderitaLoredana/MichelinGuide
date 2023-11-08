@@ -2,8 +2,6 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import Box from '@mui/material/Box';
-
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
@@ -14,7 +12,6 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import Carbonara from "../../../src/assets/CarbonaraPasta.jpg";
 import FoodBlogger from "../../../src/assets/foodBlogger.jpg";
 import { Recipe} from './data';
 
