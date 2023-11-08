@@ -12,7 +12,7 @@ import BlueberryMuffinsImage from "../../../src/assets/BluebeeryMuffin.webp";
 import ProfiterolesImage from "../../../src/assets/Profiteroles.webp";
 import CosmopolitanImage from "../../../src/assets/CosmopolitanCocktail.webp";
 import MojitoImage from "../../../src/assets/Mojito.jpg";
-import PinaColadaImage from "../../../src/assets/PinaColada.avif";
+import PinaColadaImage from "../../../src/assets/PinaColada.jpg";
 import BlueLagoonImage from "../../../src/assets/BlueLagoon.webp";
 import AperolImage from "../../../src/assets/AperolSpritz.jpg";
 import BloodyMaryImage from "../../../src/assets/BloodyMary.webp";
