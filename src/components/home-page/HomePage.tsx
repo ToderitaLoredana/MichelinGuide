@@ -109,7 +109,6 @@ const SideMenu = () => {
   }
 
   const filteredRecipes = recipesData.filter(filterElementsByCategory);
-  console.log({ filteredRecipes });
 
   return (
     <Box
@@ -175,9 +174,12 @@ const SideMenu = () => {
         </h1>
         <Divider />
         <List sx={{ fontSize: "30px", color: "#FFC15D" }}>
-          {menuItems.map((item, index) => (
-            <ListItem key={item.value} disablePadding >
-              <ListItemButton selected={item.value === currentCategory} onClick={() => handleMenuItemClick(item.value)}>
+          {menuItems.map((item) => (
+            <ListItem key={item.value} disablePadding>
+              <ListItemButton
+                selected={item.value === currentCategory}
+                onClick={() => handleMenuItemClick(item.value)}
+              >
                 <ListItemText
                   primary={item.text}
                   primaryTypographyProps={{
@@ -233,8 +235,7 @@ const SideMenu = () => {
         <section
           style={{
             padding: "30px",
-            /*backgroundColor:'#cacaca'*/ backgroundColor:
-              "rgba(49, 82, 91, 0.5)",
+            backgroundColor: "rgba(49, 82, 91, 0.5)",
           }}
         >
           <Grid component="ul" sx={{ padding: 0 }} container={true} spacing={4}>
